@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <vector>
 #include <string>
 
 using namespace std;
@@ -12,12 +11,16 @@ private:
 	int* Lines;
 public:
 	Matrix();
-	Matrix(const double** AnotherMatrix, const int AnotherMatrixColumns, const int AnotherMatrixLines);
+	Matrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns);
 	Matrix(const Matrix& AnotherMatrix);
 	Matrix(Matrix&& AnotherMatrix);
-	Matrix(const int Number);
-	Matrix(const double** AnotherMatrix);
+	Matrix(const int Number); 
+	Matrix(const char* AnotherMatrix);
 	~Matrix();
 	Matrix& operator=(const Matrix& AnotherMatrix);
 	Matrix& operator=(Matrix&& AnotherMatrix);
+	void ShowMatrix() const;
+	const string& ConvertMatrixToString() const;
 };
+
+Matrix CreateMatrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns);
