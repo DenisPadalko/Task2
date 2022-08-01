@@ -39,6 +39,7 @@ int main()
 	cout << "Task 5" << endl;
 	string Str = M.ConvertMatrixToString();
 	cout << Str << endl;
+	cout << "Task 6" << endl;
 	char* CStr = (char*)Str.c_str();
 	Matrix OneMoreMatrix(CStr);
 	OneMoreMatrix.ShowMatrix();

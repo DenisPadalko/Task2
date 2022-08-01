@@ -7,8 +7,8 @@ class Matrix
 {
 private:
 	double** MatrixElements;
-	int* Columns;
-	int* Lines;
+	int Columns;
+	int Lines;
 public:
 	Matrix();
 	Matrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns);
