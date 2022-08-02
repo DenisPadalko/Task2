@@ -23,4 +23,4 @@ public:
 	void ConvertMatrixToString(string& Str) const;
 };
 
-Matrix CreateMatrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns);
+const Matrix& CreateMatrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns);

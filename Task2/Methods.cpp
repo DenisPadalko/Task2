@@ -206,7 +206,7 @@ void Matrix::ConvertMatrixToString(string& Str) const
 	Str += ']';
 };
 
-Matrix CreateMatrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns) 
+const Matrix& CreateMatrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns) 
 {
 	Matrix* Mat = new Matrix(AnotherMatrix, AnotherMatrixLines, AnotherMatrixColumns);
 	return *Mat;
