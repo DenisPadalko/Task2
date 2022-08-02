@@ -37,7 +37,8 @@ int main()
 	Matrix2 = Matrix1;                    // срабатывает оператор присваивания
 	Matrix2.ShowMatrix();
 	cout << "Task 5" << endl;
-	string Str = M.ConvertMatrixToString();
+	string Str = "";
+	M.ConvertMatrixToString(Str);
 	cout << Str << endl;
 	cout << "Task 6" << endl;
 	char* CStr = (char*)Str.c_str();

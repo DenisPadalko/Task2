@@ -78,8 +78,7 @@ Matrix::Matrix(const int Number)
 
 Matrix::Matrix(const char* AnotherMatrix) 
 {
-	int i = 0, j = 0, k = 0;
-	char str[1000];
+	int i = 0, j = 0;
 	Lines = 0;
 	int Col = 1;
 	while (AnotherMatrix[i] != '\0')
@@ -189,24 +188,22 @@ void Matrix::ShowMatrix() const
 	}
 };
 
-const string& Matrix::ConvertMatrixToString() const
+void Matrix::ConvertMatrixToString(string& Str) const
 {
-	string* str = new string();
-	*str += '[';
+	Str += '[';
 	for (int i = 0; i < Lines; i++)
 	{
 		for (int j = 0; j < Columns; j++)
 		{
-			*str += to_string(MatrixElements[i][j]);
+			Str += to_string(MatrixElements[i][j]);
 			if (j < (Columns - 1))
 			{
-				*str += ", ";
+				Str += ", ";
 			}
 		}
-		*str += "; ";
+		Str += "; ";
 	}
-	*str += ']';
-	return *str;
+	Str += ']';
 };
 
 Matrix CreateMatrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns) 

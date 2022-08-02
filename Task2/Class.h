@@ -20,7 +20,7 @@ public:
 	Matrix& operator=(const Matrix& AnotherMatrix);
 	Matrix& operator=(Matrix&& AnotherMatrix);
 	void ShowMatrix() const;
-	const string& ConvertMatrixToString() const;
+	void ConvertMatrixToString(string& Str) const;
 };
 
 Matrix CreateMatrix(const double** AnotherMatrix, const int AnotherMatrixLines, const int AnotherMatrixColumns);
